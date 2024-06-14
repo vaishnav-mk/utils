@@ -15,9 +15,9 @@ def get_sm():
 
 def delete_sm(state_machine_arn):
     print(f"deleting sm: {state_machine_arn}")
-    # os.system(
-    #     f"aws stepfunctions delete-state-machine --state-machine-arn {state_machine_arn}"
-    # )
+    os.system(
+        f"aws stepfunctions delete-state-machine --state-machine-arn {state_machine_arn}"
+    )
     print(f"sm {state_machine_arn} deleted")
 
 
