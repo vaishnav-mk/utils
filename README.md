@@ -19,6 +19,8 @@ This repository contains various utility scripts for different tasks. The aim is
 
 A script to generate a bar chart from data stored in a JSON file.
 
+![chart](https://github.com/vaishnav-mk/utils/assets/84540554/663ecae1-2383-41f2-bc97-22b892293b2f)
+
 **Commands:**
 ```bash
 cd graph/bar
