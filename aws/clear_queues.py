@@ -7,6 +7,9 @@ from concurrent.futures import ThreadPoolExecutor
 def get_queues():
     print("fetching queues...")
     result = os.popen("aws sqs list-queues").read()
+    if not result:
+        print("no queues found")
+        return []
     response = json.loads(result)
     queues = response.get("QueueUrls", [])
     print(
