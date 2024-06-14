@@ -21,6 +21,9 @@ A script to generate a bar chart from data stored in a JSON file.
 
 ![chart](https://github.com/vaishnav-mk/utils/assets/84540554/663ecae1-2383-41f2-bc97-22b892293b2f)
 
+* `--path`: Path to the JSON file containing data. (Default: `data.json`)
+* `--filename`: Name of the output file. (Default: `chart.png`)
+
 **Commands:**
 ```bash
 cd graph/bar
@@ -84,6 +87,11 @@ A script to delete AWS Step Functions state machines.
 ```bash
 cd aws
 python clear_statemachines.py [--threads {number}] [--all | --prefix {prefix}]
+```
+
+**Example:**
+```bash
+python clear_statemachines.py --prefix "ab" # Delete state machines with prefix "ab"
 ```
 
 ## Azure
