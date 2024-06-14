@@ -1,0 +1,6 @@
+[
+    {"AER_nonGPU": 17, "AER_GPU": 14, "AWS_Braket": 11},
+    {"AER_nonGPU": 50, "AER_GPU": 33, "AWS_Braket": 24},
+    {"AER_nonGPU": 50, "AER_GPU": 33, "AWS_Braket": 19},
+    {"AER_nonGPU": 15, "AER_GPU": 21, "AWS_Braket": 13}
+]
