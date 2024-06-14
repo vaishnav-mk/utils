@@ -23,11 +23,14 @@ A script to generate a bar chart from data stored in a JSON file.
 
 * `--path`: Path to the JSON file containing data. (Default: `data.json`)
 * `--filename`: Name of the output file. (Default: `chart.png`)
+* `--title`: Title of the chart. (Default: `Chart`)
+* `--xlabel`: Label for the x-axis. (Default: `entries`)
+* `--ylabel`: Label for the y-axis. (Default: `vals (Seconds)`)
 
 **Commands:**
 ```bash
 cd graph/bar
-python main.py [--path {path to JSON file}] [--filename {name of the output file}]
+python main.py [--path {path to JSON file}] [--filename {name of the output file}] [--title {title of the chart}] [--xlabel {label for x-axis}] [--ylabel {label for y-axis}]
 ```
 
 **Files:**
