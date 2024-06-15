@@ -1,3 +1,5 @@
+Here is the updated README with the new `clear_azure_queues.py` and `clear_storage_accounts.py` scripts, as well as the `clear_resource_groups.py` script:
+
 # utils
 
 This repository contains various utility scripts for different tasks. The aim is to provide a collection of scripts that can be used to automate repetitive tasks without any external dependencies.
@@ -11,7 +13,9 @@ This repository contains various utility scripts for different tasks. The aim is
   - [Clear Queues](#clear-queues)
   - [Clear State Machines](#clear-state-machines)
 - [Azure](#azure)
-
+  - [Clear Queues](#clear-queues-azure)
+  - [Clear Storage Accounts](#clear-storage-accounts)
+  - [Clear Resource Groups](#clear-resource-groups)
 
 ## Graph
 
@@ -99,4 +103,82 @@ python clear_statemachines.py --prefix "ab" # Delete state machines with prefix 
 
 ## Azure
 
-No scripts available currently under Azure. (Work in progress)
+### Clear Queues
+
+A script to delete Azure Storage Queues.
+
+* `--threads`: Number of threads to use for deletion. (Default: 10)
+* `--storage-account`: The name of the Azure Storage account.
+* `--resource-group`: The name of the Azure resource group.
+* `--all`: Delete all queues. (Default: True)
+* `--prefix`: Prefix of the queues to delete. (Default: None)
+* `--list`: Comma-separated list of queue names to delete. (Default: None)
+
+**Commands:**
+```bash
+cd azure
+python clear_azure_queues.py --storage-account {storage_account_name} --resource-group {resource_group} [--threads {number}] [--all | --prefix {prefix} | --list {comma-separated-queue-names}]
+```
+
+**Example:**
+- To delete all queues:
+  ```bash
+  python clear_azure_queues.py --storage-account "account_name" --resource-group "resource_group" --all
+  ```
+- To delete queues starting with a specific prefix:
+  ```bash
+  python clear_azure_queues.py --storage-account "storage_account_name" --resource-group "resource_group" --prefix "prefix"
+  ```
+- To delete specific queues:
+  ```bash
+  python clear_azure_queues.py --storage-account "storage_account_name" --resource-group "resource_group" --list "queue1,queue2,queue3"
+  ```
+
+### Clear Storage Accounts
+
+A script to delete all Azure Storage accounts in a specified resource group.
+
+* `--threads`: Number of threads to use for deletion. (Default: 10)
+* `--resource-group`: The name of the Azure resource group.
+
+**Commands:**
+```bash
+cd azure
+python clear_storage_accounts.py --resource-group {resource_group} [--threads {number}]
+```
+
+**Example:**
+- To delete all storage accounts in a resource group:
+  ```bash
+  python clear_storage_accounts.py --resource-group "resource_group"
+  ```
+
+### Clear Resource Groups
+
+A script to delete Azure resource groups.
+
+* `--threads`: Number of threads to use for deletion. (Default: 10)
+* `--all`: Delete all resource groups. (Default: True)
+* `--prefix`: Prefix of the resource groups to delete. (Default: None)
+* `--list`: Comma-separated list of resource group names to delete. (Default: None)
+
+**Commands:**
+```bash
+cd azure
+python clear_resource_groups.py [--threads {number}] [--all | --prefix {prefix} | --list {comma-separated-resource-group-names}]
+```
+
+**Example:**
+- To delete all resource groups:
+  ```bash
+  python clear_resource_groups.py --all
+  ```
+- To delete resource groups starting with a specific prefix:
+  ```bash
+  python clear_resource_groups.py --prefix "prefix"
+  ```
+- To delete specific resource groups:
+  ```bash
+  python clear_resource_groups.py --list "group1,group2,group3"
+  ```
+
