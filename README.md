@@ -1,5 +1,3 @@
-Here is the updated README with the new `clear_azure_queues.py` and `clear_storage_accounts.py` scripts, as well as the `clear_resource_groups.py` script:
-
 # utils
 
 This repository contains various utility scripts for different tasks. The aim is to provide a collection of scripts that can be used to automate repetitive tasks without any external dependencies.
@@ -103,7 +101,7 @@ python clear_statemachines.py --prefix "ab" # Delete state machines with prefix 
 
 ## Azure
 
-### Clear Queues
+### Clear Queues Azure
 
 A script to delete Azure Storage Queues.
 
